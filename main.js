@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const body_parser = require("body-parser");
 const path = require("path");
@@ -87,6 +88,6 @@ app.post("/updatepage", (req, res, next) => {
   return next();
 });
 
-app.listen((arg) => {
-  console.log("Server started.");
+app.listen(process.env.PORTS || 8000,(arg) => {
+  console.log(`Server started in http://localhost:${process.env.PORTS}/index `);
 });
