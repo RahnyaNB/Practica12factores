@@ -1,0 +1,8 @@
+services:
+  notasbd:
+    image: mongo:5.0.0
+    container_name: databasenotas
+    ports:
+    - 27017:27017
+    volumes: 
+    - C:/mongodb/db:/data/db
